@@ -1,0 +1,83 @@
+
+# @ get one todo
+# and getting the user that created the todo
+GET http://localhost:3000/users/64bf95676076529a9a234527
+
+
+####
+
+#get all todos
+GET http://localhost:3000/todos
+
+####
+    
+
+#get all todos
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+    "task" : "Buy porche",
+    "userId" : "64c7adfc1ee8eb77dc722a5f"
+}
+
+
+####
+
+#get completed todos
+GET http://localhost:3000/todos/completed
+
+#####
+
+#post a  todo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGM3YWRmYzFlZThlYjc3ZGM3MjJhNWYiLCJpYXQiOjE2OTA4MDc4MDR9.QnVJyuXVLSYNUrmayW6qSImvUlvbbx7R-I2lnjRuG6s"
+}
+
+
+#####
+
+# update a particulare todo
+PUT http://localhost:3000/todos/64bfa746291d8f605d8daf12
+Content-Type: application/json
+
+{
+    "completed" : true
+}
+
+####
+# Register
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username" : "seconduser2",
+    "password" : "password"
+}
+
+
+####
+# login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username" : "seconduser1",
+    "password" : "password"
+}
+
+####
+GET http://localhost:3000/users/profile
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGM3YWRmYzFlZThlYjc3ZGM3MjJhNWYiLCJpYXQiOjE2OTA4MDc4MDR9.QnVJyuXVLSYNUrmayW6qSImvUlvbbx7R-I2lnjRuG6s"
+}
+
+####
+# GET One user and their Todos
+GET http://localhost:3000/users/amara12345
+
